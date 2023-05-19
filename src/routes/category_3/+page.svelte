@@ -1,9 +1,12 @@
 <script>
-	import Category from '../lib/category.svelte';
-	import Info from '../lib/info.svelte';
-	import Options from '../lib/options.svelte';
+	import Category from '../../lib/category.svelte';
+	import Info from '../../lib/info.svelte';
+	import Options from '../../lib/options.svelte';
 </script>
 
+<svelte:head>
+	<title>Category_3</title>
+</svelte:head>
 <section class="info">
 	<Info />
 </section>
