@@ -11,6 +11,9 @@
 		display: grid;
 		grid-template-rows: auto auto;
 		justify-items: center;
+		width: 300px;
+		height: auto;
+		background: #11654325;
 	}
 	.image {
 		height: 100px;

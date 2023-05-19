@@ -4,6 +4,9 @@
 	import Options from '../lib/options.svelte';
 </script>
 
+<svelte:head>
+	<title>Main</title>
+</svelte:head>
 <section class="info">
 	<Info />
 </section>
