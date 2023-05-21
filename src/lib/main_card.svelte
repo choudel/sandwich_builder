@@ -1,13 +1,13 @@
 <script>
-	export let ingredient;
+	export let infos;
 </script>
 
 <div class="card">
-	<div class="image"><img src={ingredient.image} alt="ingredient" /></div>
+	<div class="image">image</div>
 	<div class="description">
-		<h3>{ingredient.name}</h3>
-		<p>{ingredient.desc}</p>
-		<h4>{ingredient.price}</h4>
+		<h3>{infos.name}</h3>
+		<p>{infos.desc}</p>
+		<h4>{infos.price}</h4>
 		<button>select!</button>
 	</div>
 </div>
@@ -22,12 +22,8 @@
 		background: #11654325;
 	}
 	.image {
-		display: grid;
+		height: 100px;
 		width: 100px;
 		background-color: brown;
-		align-content: center;
-	}
-	img {
-		width: 100px;
 	}
 </style>

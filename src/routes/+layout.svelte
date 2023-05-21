@@ -12,14 +12,20 @@
 		display: grid;
 		background: #888282;
 		@media only screen and (max-width: $sm) {
-			min-height: 76vmax !important;
+			height: $sm_header_min_height;
+			padding: 0 0;
 		}
-
-		@media only screen and (max-width: $md) {
-			min-height: 45vmax !important;
+		@media only screen and (min-width: $sm) {
+			height: $sm_header_min_height;
+			padding: 0 0;
 		}
-		@media only screen and (max-width: $lg) {
-			min-height: 45vmax !important;
+		@media only screen and (min-width: $md) {
+			height: $md_header_min_height;
+			padding: 0 0;
+		}
+		@media only screen and (min-width: $lg) {
+			height: $lg_header_min_height;
+			padding: 0 0;
 		}
 	}
 </style>

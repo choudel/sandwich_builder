@@ -1,20 +1,20 @@
 <script>
-	import Category from '../lib/category.svelte';
-	import Info from '../lib/info.svelte';
-	import Options from '../lib/options.svelte';
+	import Category from '../../lib/category.svelte';
+	import Info from '../../lib/info.svelte';
+	import Options from '../../lib/options.svelte';
 	/** @type {import('./$types').PageData} */
 	export let data;
 </script>
 
 <svelte:head>
-	<title>Main</title>
+	<title>Category_1</title>
 </svelte:head>
 <section class="info">
 	<Info />
 </section>
 <section class="pick">
 	<Category ingredient_type={data.categories} />
-	<Options ingredient_info={data.cuisines} />
+	<Options ingredient_info={data.addons} />
 </section>
 
 <style lang="scss">
