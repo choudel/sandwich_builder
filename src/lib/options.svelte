@@ -1,58 +1,50 @@
 <script>
 	import Card from './card.svelte';
 	import MainCard from './main_card.svelte';
+	/**
+	 * @type {{ length: any; cuisines: any; }}
+	 */
 	export let ingredient_info;
 </script>
 
-{#if ingredient_info.cuisines}
-	<div class="options">
+<div class="options">
+	{#if ingredient_info.cuisines}
 		{#each ingredient_info as info}
 			<MainCard infos={info} />
 		{/each}
-	</div>
-{:else}
-	<div class="options">
+	{:else}
 		{#each ingredient_info as info}
 			<Card ingredient={info} />
 		{/each}
-	</div>
-{/if}
+	{/if}
+</div>
 
 <style lang="scss">
 	.options {
-		display: grid;
-		column-gap: 10px;
-		justify-items: center;
-		grid-template-columns: auto auto;
-		grid-template-rows: auto auto;
-		height: $options_max_height;
-		overflow-y: scroll;
-		overflow-x: hidden;
+		display: flex;
+		gap: 1em;
+
 		@media only screen and (max-width: $sm) {
 			height: $sm_options_max_height;
-			grid-template-columns: auto auto auto auto;
-			grid-template-rows: auto;
 			overflow-x: scroll;
 			overflow-y: hidden;
 		}
 		@media only screen and (min-width: $sm) {
-			height: $sm_options_max_height;
-			grid-template-columns: auto auto auto auto;
-			grid-template-rows: auto;
+			height: $sm_options_min_height;
 			overflow-x: scroll;
 			overflow-y: hidden;
 		}
 		@media only screen and (min-width: $md) {
-			height: $md_options_max_height;
-			grid-template-columns: auto auto;
-			grid-template-rows: auto auto;
+			height: $md_options_min_height;
+			flex-wrap: wrap;
+			justify-content: center;
 			overflow-x: hidden;
 			overflow-y: scroll;
 		}
 		@media only screen and (min-width: $lg) {
-			height: $lg_options_max_height;
-			grid-template-columns: auto auto;
-			grid-template-rows: auto auto;
+			height: $lg_options_min_height;
+			flex-wrap: wrap;
+			justify-content: center;
 			overflow-y: scroll;
 			overflow-x: hidden;
 		}

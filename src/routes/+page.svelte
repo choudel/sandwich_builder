@@ -21,9 +21,8 @@
 	.info {
 		display: grid;
 		background: #595050;
-		height: $info_min_height;
 		@media only screen and (max-width: $sm) {
-			height: $sm_info_min_height;
+			height: $sm_info_max_height;
 			padding: 0 0;
 		}
 		@media only screen and (min-width: $sm) {
@@ -36,16 +35,14 @@
 		}
 		@media only screen and (min-width: $lg) {
 			height: $lg_info_min_height;
-			padding: 0 0;
+			padding: 0 10vw;
 		}
 	}
 	.pick {
 		display: grid;
 		background: #d8d1d1;
-
-		height: $pick_min_height;
 		@media only screen and (max-width: $sm) {
-			height: $sm_pick_min_height;
+			height: $sm_pick_max_height;
 			padding: 0 0;
 		}
 		@media only screen and (min-width: $sm) {
@@ -58,7 +55,7 @@
 		}
 		@media only screen and (min-width: $lg) {
 			height: $lg_pick_min_height;
-			padding: 0 0;
+			padding: 0 10vw;
 		}
 	}
 </style>

@@ -1,4 +1,7 @@
 <script>
+	/**
+	 * @type {{ image: any; name: any; desc: any; price: any; }}
+	 */
 	export let ingredient;
 </script>
 
@@ -14,20 +17,28 @@
 
 <style lang="scss">
 	.card {
-		display: grid;
-		grid-template-rows: auto auto;
-		justify-items: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		width: 300px;
 		height: auto;
 		background: #11654325;
+		flex-shrink: 0;
 	}
 	.image {
-		display: grid;
+		display: flex;
 		width: 100px;
 		background-color: brown;
 		align-content: center;
 	}
 	img {
 		width: 100px;
+		height: 100px;
+	}
+	.description {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
 	}
 </style>

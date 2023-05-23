@@ -5,15 +5,21 @@ export async function load({ parent }) {
 		...categories,
 		veggies: [
 			{
-				image: '/veggies/',
-				name: 'tomato',
+				image: '/veggies/tomato.webp',
+				name: 'Tomato',
 				desc: 'refreshing and tasty',
 				price: 10
 			},
 			{
-				image: '/veggies/',
-				name: 'lettuce',
+				image: '/veggies/lettuce.webp',
+				name: 'Lettuce',
 				desc: 'mainly to make the sandwich look bigger',
+				price: 10
+			},
+			{
+				image: '/veggies/onion.webp',
+				name: 'Onion',
+				desc: 'no sandwich can be without it',
 				price: 10
 			}
 		]

@@ -5,15 +5,27 @@ export async function load({ parent }) {
 		...categories,
 		sauces: [
 			{
-				image: '/sauces/',
-				name: 'Samurai',
-				desc: 'spicey and asiatic',
+				image: '/sauces/Aioli.webp',
+				name: 'Aioli',
+				desc: 'garlic mayo with olive oil',
 				price: 50
 			},
 			{
-				image: '/sauces/',
-				name: 'sauce algerienne',
-				desc: 'Harissa and mayo',
+				image: '/sauces/sauce-algerienne.webp',
+				name: 'Sauce Algerienne',
+				desc: 'Harissa and mayo directly from Algeria',
+				price: 60
+			},
+			{
+				image: '/sauces/sauce-samurai.webp',
+				name: 'Sauce Samurai',
+				desc: 'garlic mayo with olive oil',
+				price: 40
+			},
+			{
+				image: '/sauces/ranch-sauce.webp',
+				name: 'Ranch',
+				desc: 'From the USA lol',
 				price: 60
 			}
 		]

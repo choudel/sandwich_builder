@@ -5,22 +5,16 @@ export async function load({ parent }) {
 		...categories,
 		addons: [
 			{
-				image: '/addons/',
+				image: '/addons/olives.webp',
 				name: 'Olives',
 				desc: 'Watch out for your teeth',
 				price: 5
 			},
 			{
-				image: '/addons/',
-				name: 'Millefeuilles',
-				desc: 'No judging',
+				image: '/addons/harissa.webp',
+				name: 'Harissa',
+				desc: 'Not as spicey as the old days',
 				price: 40
-			},
-			{
-				image: '/addons/',
-				name: 'Spaguetti',
-				desc: 'with sauce bolognaise',
-				price: 100
 			}
 		]
 	};
