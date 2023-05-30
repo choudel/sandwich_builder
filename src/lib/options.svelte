@@ -5,6 +5,9 @@
 	 * @type {{ length: any; cuisines: any; }}
 	 */
 	export let ingredient_info;
+	/**
+	 * @type {any}
+	 */
 </script>
 
 <div class="options">
@@ -23,7 +26,9 @@
 	.options {
 		display: flex;
 		gap: 1em;
-
+		padding: 10px;
+		background: $pick_color;
+		box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 		@media only screen and (max-width: $sm) {
 			height: $sm_options_max_height;
 			overflow-x: scroll;

@@ -2,22 +2,27 @@ $sm: 576px;
 $md: 768px;
 $lg: 992px;
 /* Header vars*/
-$sm_header_min_height: 45vh;
-$sm_header_min_height: 45vh;
+$sm_header_min_height: 40vh;
+$sm_header_min_height: 40vh;
 $md_header_min_height: 43vh;
 $lg_header_min_height: 40vh;
+$header_color:#98D8AA;
 /* Info bar vars*/
-$sm_info_max_height: 5vh;
-$sm_info_min_height: 5vh;
-$md_info_min_height: 9vh;
-$lg_info_min_height: 12vh;
+$sm_info_max_height: calc(10vh - 10px);
+$sm_info_min_height: calc(10vh - 10px);
+$md_info_min_height: calc(9vh - 10px);
+$lg_info_min_height: calc(12vh - 10px);
+$info_color:#F7D060;
 /* picking section bar vars*/
 $sm_pick_max_height: 50vh;
 $sm_pick_min_height: 50vh;
 $md_pick_min_height: 48vh;
 $lg_pick_min_height: 48vh;
+$pick_color:#F3E99F;
 /* options component vars*/
-$sm_options_max_height: 42vh;
-$sm_options_min_height: 42vh;
-$md_options_min_height: 40vh;
-$lg_options_min_height: 40vh;
+$sm_options_max_height: calc(42vh - 20px);
+$sm_options_min_height: calc(42vh - 20px);
+$md_options_min_height: calc(40vh - 20px);
+$lg_options_min_height: calc(40vh - 20px);
+
+$category_color:#FF6D60;

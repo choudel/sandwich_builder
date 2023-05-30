@@ -1,16 +1,18 @@
 <script>
 	import Hero from '../lib/hero.svelte';
+	import { selected } from '../stores';
 </script>
 
 <header class="hero">
 	<Hero />
+	<div>{$selected}</div>
 </header>
 <slot />
 
 <style lang="scss">
 	header {
 		display: grid;
-		background: #888282;
+		background: $header_color;
 		@media only screen and (max-width: $sm) {
 			height: $sm_header_min_height;
 			padding: 0 0;
