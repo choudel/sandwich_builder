@@ -8,86 +8,85 @@
 
 <div class="card">
 	<div class="front">
-		<div class="background" />
-		<div class="image"><img src={ingredient.image} alt="ingredient" /></div>
-		<div class="bottom">
-			<h3 class="name">{ingredient.name}</h3>
-		</div>
-	</div>
-	<div class="back">
+		<img class="thumbnail" src={ingredient.image} alt="ingredient" />
+		<h3 class="name">{ingredient.name}</h3>
 		<p class="desc">{ingredient.desc}</p>
 		<h4 class="price">{ingredient.price}</h4>
-		<button on:click={() => selected.update((n) => (n = ingredient.name))}>select!</button>
+		<button class="btn" on:click={() => selected.update((n) => (n = ingredient.name))}
+			>Choose</button
+		>
+	</div>
+	<div class="background">
+		<img src={ingredient.image} alt="ingredient" />
 	</div>
 </div>
 
 <style lang="scss">
+	img {
+		background-color: white;
+	}
+
+	/* Card */
 	.card {
-		display: flex;
-		flex-direction: column;
-		width: 200px;
-		height: 300px;
-		flex-shrink: 0;
+		position: relative;
+
 		&:hover {
+			.front {
+				transform: translateY(-50%);
+			}
+
+			.btn {
+				display: inline-block;
+			}
+
 			.background {
-				height: 250px;
-				transform: scale(1.1) translateY(10%);
-			}
-			.image {
-				width: 100px;
-				align-content: center;
-				transform: translateY(-3%);
-			}
-			img {
-				width: 100px;
-				height: 100px;
-				transform: translateY(-3%);
-			}
-			.back {
-				display: flex;
-				flex-direction: column;
-				align-content: center;
-				z-index: 1;
-				.desc {
-					margin: 0;
-				}
-				.price {
-					margin: 0;
-				}
+				transform: scale(1.25, 1.5);
+				opacity: 1;
 			}
 		}
 	}
+
 	.front {
-		position: relative;
-		flex-direction: column;
-		display: flex;
-		align-items: center;
-		z-index: 1;
-	}
-	.image {
-		width: 200px;
-		align-content: center;
-	}
-	img {
-		width: 200px;
-		height: 250px;
-	}
-	.bottom {
-		display: flex;
-		align-items: center;
 		text-align: center;
-		z-index: 1;
+		transition: 250ms;
 	}
+
+	.thumbnail {
+		width: 250px;
+		border-radius: 10px;
+	}
+
 	.name {
-		margin: 0;
+		font-weight: bold;
+		margin: 10px 0;
 	}
+
+	.btn {
+		display: none;
+		width: 50%;
+		background-color: blueviolet;
+		color: white;
+		border: 1px solid white;
+		border-radius: 10px;
+		padding: 10px;
+	}
+
 	.background {
 		position: absolute;
-		background: #11654325;
-		width: 200px;
-		height: 300px;
-	}
-	.back {
-		display: none;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		z-index: -1;
+		background-color: #234;
+		border-radius: 10px;
+		opacity: 0;
+		transition: 250ms;
+
+		& img {
+			height: 100%;
+			width: 100%;
+			opacity: 0.1;
+		}
 	}
 </style>
