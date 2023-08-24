@@ -1,5 +1,8 @@
 <script>
-	export let infos;
+	/**
+	 * @type {{ name: any; desc: any; price: any; }}
+	 */
+	 export let infos;
 </script>
 
 <div class="card">

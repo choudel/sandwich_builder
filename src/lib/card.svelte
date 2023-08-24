@@ -4,6 +4,12 @@
 	 */
 	export let ingredient;
 	import { selected } from '../stores';
+	function handleAdd() {
+		selected.update((n) => [...n, ingredient.name]);
+	}
+	function handleRemove() {
+		selected.update((n) => n.filter((item) => item !== ingredient.name));
+	}
 </script>
 
 <div class="card">
@@ -12,9 +18,8 @@
 		<h3 class="name">{ingredient.name}</h3>
 		<p class="desc">{ingredient.desc}</p>
 		<h4 class="price">{ingredient.price}</h4>
-		<button class="btn" on:click={() => selected.update((n) => (n = ingredient.name))}
-			>Choose</button
-		>
+		<button class="btn" on:click={handleAdd}>Choose</button>
+		<button class="remove" on:click={handleRemove}>Remove item</button>
 	</div>
 	<div class="background">
 		<img src={ingredient.image} alt="ingredient" />
@@ -32,16 +37,30 @@
 
 		&:hover {
 			.front {
-				transform: translateY(-50%);
+				transform: translateY(-10%);
 			}
-
+			.front > img {
+				height: 50%;
+				width: 50%;
+			}
 			.btn {
 				display: inline-block;
 			}
-
+			.remove {
+				display: inline-block;
+			}
 			.background {
 				transform: scale(1.25, 1.5);
 				opacity: 1;
+			}
+			.name {
+				margin: 0;
+			}
+			.desc {
+				margin: 0;
+			}
+			.price {
+				margin: 0;
 			}
 		}
 	}
@@ -52,7 +71,7 @@
 	}
 
 	.thumbnail {
-		width: 250px;
+		width: 150px;
 		border-radius: 10px;
 	}
 
@@ -70,7 +89,15 @@
 		border-radius: 10px;
 		padding: 10px;
 	}
-
+	.remove {
+		display: none;
+		width: 50%;
+		background-color: blueviolet;
+		color: white;
+		border: 1px solid white;
+		border-radius: 10px;
+		padding: 10px;
+	}
 	.background {
 		position: absolute;
 		top: 0;
@@ -82,11 +109,5 @@
 		border-radius: 10px;
 		opacity: 0;
 		transition: 250ms;
-
-		& img {
-			height: 100%;
-			width: 100%;
-			opacity: 0.1;
-		}
 	}
 </style>
